@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+$principal-color: #750E2F;
+$special-text-color: #444444;
+$font-color: #000000;
+
+body, html {
+  font-family: Roboto,Arial,Tahoma,sans-serif;
+}
+
+
+h1, h2, h3 {
+  color: $principal-color;
+}
+
+h4, h5, h6 {
+  color: $special-text-color;
+}
+
+p, b {
+  color: $font-color;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
