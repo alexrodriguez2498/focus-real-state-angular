@@ -6,6 +6,7 @@
   position: absolute;
   width: 100%;
 
+
   .navbar-logo {
     width: 200px;
     margin-right: 7rem;
@@ -27,10 +28,18 @@
       cursor: pointer;
       color: white;
       background-color: #750E2F;
+
     }
     &:active {
       color: white;
       background-color: #750E2F;
     }
   }
+}
+
+.navbar-scrolled {
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 11;
 }

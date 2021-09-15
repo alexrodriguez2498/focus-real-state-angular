@@ -1,1 +1,64 @@
-<p>contact works!</p>
+<section class="bio-security">
+  <img src="./assets/contacto.png" class="banner" alt="">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-6">
+        <img src="./assets/contact-form.png" class="desinfection" alt="">
+        <p class="text-center m-0 font-weight-bold">Oficina de Inmobiliaria Focus , edificio CENTRO A-1, Piso 4, Oficina Nro 4-4</p>
+        <p class="text-center m-0 font-weight-bold">Municipio Valencia, Parroquia San José, Diagonal a Conceptop la Viña</p>
+        <p class="text-center m-0 font-weight-bold">en Carabobo Tel. +58 (414) 4329-412</p>
+      </div>
+      <div class="col-6">
+        <h1 class="title">
+          ¿Tiene alguna duda?<br>
+          Contacte con nosotros
+        </h1>
+        <form [formGroup]="contactForm" (submit)="sendForm()">
+          <div>
+            <h2 class="m-0">Nombre</h2>
+            <mat-form-field appearance="outline" class="w-100">
+              <input matInput type="text" formControlName="name" placeholder="Introducir el nombre">
+            </mat-form-field>
+          </div>
+          <div>
+            <h2 class="m-0">Correo electronico</h2>
+            <mat-form-field appearance="outline" class="w-100">
+              <input matInput formControlName="email" placeholder="Introducir su e-mail">
+            </mat-form-field>
+          </div>
+          <div>
+            <h2 class="m-0">Telefono de contacto</h2>
+            <mat-form-field appearance="outline" class="w-100">
+              <input matInput type="number" formControlName="phone" placeholder="Introducir su numero para contactar con usted">
+            </mat-form-field>
+          </div>
+          <div>
+            <h2 class="m-0">Mensaje</h2>
+            <mat-form-field appearance="outline" class="w-100">
+              <textarea  matInput formControlName="message" style="height: 100px" placeholder="Escriba su mensaje o duda"></textarea>
+            </mat-form-field>
+          </div>
+          <button mat-flat-button  class="send-button w-100" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <h1 class="feature-title">
+    Todo comienza con un sueño y Focus te lo hace realidad.
+  </h1>
+  <div class="footer container">
+    <div class="row">
+      <div class="col-4">
+        <img src="./assets/logo-2.png" alt="">
+      </div>
+      <div class="col-8 text-center font-weight-bold">
+        <p>Inmobiliaria Focus Edificio CENTRO A-1, Piso 4, Oficina Nro 4-4| Carabobo (Valencia)</p>
+        <p>+58 (414) 4329-412</p>
+        <p>Contactar | Aviso Legal | Panel</p>
+      </div>
+      <div class="col-12 mt-5">
+        <p>© 2020 Luar Agency -</p>
+      </div>
+    </div>
+  </div>
+</section>

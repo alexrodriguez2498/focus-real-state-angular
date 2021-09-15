@@ -3,6 +3,11 @@ $principal-color: #750E2F;
 $special-text-color: #444444;
 $font-color: #000000;
 
+@font-face{
+  font-family: 'milenia';
+  src: local('milenia'), url('./assets/fonts/milenia.ttf');
+}
+
 body, html {
   font-family: Roboto,Arial,Tahoma,sans-serif;
 }
