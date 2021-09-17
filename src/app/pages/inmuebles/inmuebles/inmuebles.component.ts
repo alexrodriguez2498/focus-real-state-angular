@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inmuebles.component.scss']
 })
 export class InmueblesComponent implements OnInit {
+  iterator = [1, 2, 3, 4, 5];
 
   constructor() { }
 

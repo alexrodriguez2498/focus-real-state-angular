@@ -1,9 +1,16 @@
-<nav class="navbar" (scroll)="onScroll($event)">
-  <img routerLink="home" class="navbar-logo" src="../../../assets/logo.png" alt="">
+<!--<nav class="navbar" (scroll)="onScroll($event)">-->
+<!--  <img routerLink="home" class="navbar-logo" src="../../../assets/logo.png" alt="">-->
+<!--  <ul>-->
+<!--    <li class="navbar-itens" routerLink="home" routerLinkActive="active">Inicio</li>-->
+<!--    <li class="navbar-itens" routerLink="inmuebles" routerLinkActive="active">Inmuebles</li>-->
+<!--    <li class="navbar-itens" routerLink="bio-security" routerLinkActive="active">Protocolo de Bio Seguridad</li>-->
+<!--    <li class="navbar-itens" routerLink="contact" routerLinkActive="active">Contacto</li>-->
+<!--  </ul>-->
+<!--</nav>-->
+
+<mat-toolbar class="navbar">
+  <img routerLink="home" (click)="getUrl()" class="navbar-logo" src="../../../assets/logo.png" alt="">
   <ul>
-    <li class="navbar-itens" routerLink="home" routerLinkActive="active">Inicio</li>
-    <li class="navbar-itens" routerLink="inmuebles" routerLinkActive="active">Inmuebles</li>
-    <li class="navbar-itens" routerLink="bio-security" routerLinkActive="active">Protocolo de Bio Seguridad</li>
-    <li class="navbar-itens" routerLink="contact" routerLinkActive="active">Contacto</li>
+    <li *ngFor="let item of navItems" (click)="getUrl()" [routerLink]="item.url" [ngClass]="{'nav-link-active': currentUrl === item.url}">{{item.text}}</li>
   </ul>
-</nav>
+</mat-toolbar>

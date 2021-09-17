@@ -38,7 +38,7 @@
               <textarea  matInput formControlName="message" style="height: 100px" placeholder="Escriba su mensaje o duda"></textarea>
             </mat-form-field>
           </div>
-          <button mat-flat-button  class="send-button w-100" type="submit">Enviar</button>
+          <button mat-flat-button [disabled]="contactForm.invalid" class="send-button w-100" type="submit">Enviar</button>
         </form>
       </div>
     </div>

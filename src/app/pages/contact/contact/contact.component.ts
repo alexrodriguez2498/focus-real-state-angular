@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
@@ -18,9 +18,9 @@ export class ContactComponent implements OnInit {
   }
 
   private createForm() {
-    this.fb.group({
+    this.contactForm = this.fb.group({
       name: ['', Validators.required],
-      email: ['', Validators.email, Validators.required],
+      email: ['', [Validators.email, Validators.required]],
       phone: ['', Validators.required],
       message: ['', Validators.required]
     });
